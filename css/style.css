@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    max-width: 99%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+figure {
+    margin-left: 50px;
+    margin-top: 35px;
+}
+
+#img-logo {
+    border-radius: 100%;
+    width: 180px;
+    height: 180px;
+    border: 2px solid black;
+}
+
+#container-input {
+    height: 80px;
+    width: 220px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    height: 50px;
+    width: 250px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #4dffc5;
+    font-size: 18px;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+#btn-input {
+    height: 50px;
+    font-size: 18px;
+    margin-left: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #4dffc5;
+    color: black;
+}
+
+#btn-input:hover {
+    background-color: orange;
+}
+
+#container-parag{
+    display: flex;
+    align-items: center;
+    width: 600px;
+}
+
+.parag-header {
+    margin: 20px;
+    padding: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.parag-header:hover{
+    border: 2px solid #4dffc5;
+    background-color: #4dffc5;
+    width: 130px;
+    text-align: center;
+}
+
+
+.link-parag {
+    text-decoration: none;
+    color: black;
+}
+
+.containerPrincipal{
+    display: grid;
+    grid-template-columns: 10px repeat(6, 1fr) 10px;
+}
+
+.containerPrincipalDosProdutos{
+    display: flex;
+    align-items: flex-start;
+    margin: 30px;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.tituloDaSecao{
+    font-size: 25px;
+}
+
+.containerDosProdutos{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding: 20px;
+    width: 400px;
+    border: 2px solid #4dffc5;
+    border-radius: 10px;
+
+}
+
+figure {
+    margin: 10px;
+}
+
+.figureProduto{
+   padding: 10px; 
+}
+
+.imgProduto{
+    height: 250px;
+    width: 300px;
+}
+
+.categoria{
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    background-color: #4dffc5;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.descricao{
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.preco{
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.botaoAdicionar{
+    margin-bottom: 10px;
+    font-size: 20px;
+    background-color: #4dffc5;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.botaoAdicionar:hover{
+    background-color: orange;
+}
+
