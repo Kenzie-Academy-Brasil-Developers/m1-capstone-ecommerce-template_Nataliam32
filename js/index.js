@@ -12,6 +12,21 @@ let main = document.createElement('main');
 let sectionPai = document.createElement('section');
 sectionPai.setAttribute('class', 'containerPrincipal');
 
+// Constroi o Carrinho de Compras
+
+let section = document.createElement('section');
+section.setAttribute('class', 'containerSection');
+
+let tituloCarrinhoCompras = document.createElement('h4');
+tituloCarrinhoCompras.setAttribute('class', 'tituloCarrinhoCompras');
+tituloCarrinhoCompras.innerText = 'Carrinho de Compras';
+
+let divProdutosEscolhidos = document.createElement('div');
+divProdutosEscolhidos.setAttribute('class', 'divProdutosEscolhids');
+
+let divCheckOut = document.createElement('div');
+divCheckOut.setAttribute('class', 'divCheckOut');
+
 
 function constroiCardsProdutos(lista) {
     for (let i = 0; i < lista.length; i++){
@@ -63,7 +78,11 @@ function constroiCardsProdutos(lista) {
         containerDosProdutos.appendChild(descricao);
         containerDosProdutos.appendChild(preco);
         containerDosProdutos.appendChild(botaoAdicionar);
+        section.appendChild(tituloCarrinhoCompras);
+        section.appendChild(divProdutosEscolhidos);
+        section.appendChild(divCheckOut);
         main.appendChild(sectionPai);
+        main.appendChild(section);
         body.appendChild(main);
     }
 
@@ -72,3 +91,8 @@ function constroiCardsProdutos(lista) {
 constroiCardsProdutos(kits);
 constroiCardsProdutos(acessorios);
 constroiCardsProdutos(placas);
+
+
+
+
+

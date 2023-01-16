@@ -102,7 +102,7 @@ const data = [
   },
   {
     id: 11,
-    img: "../img/acessorios/leds.jpg/webp",
+    img: "../img/acessorios/led.jpg",
     nameItem: "Kit 10 LEDs Variadas Cores",
     description: "Kit 10 LEDs Variadas Cores",
     value: 3.5,
@@ -174,7 +174,7 @@ const data = [
   },
   {
     id: 19,
-    img: "../img/placa/mkr1010.jpg.webp",
+    img: "../img/placas/mkr1010.jpg",
     nameItem: "Arduino MKR WiFi 1010",
     description: "Arduino MKR WiFi 1010",
     value: 800,
@@ -183,7 +183,7 @@ const data = [
   },
   {
     id: 20,
-    img: "../img/mkr1010.jpg.webp",
+    img: "../img/placas/nano.png",
     nameItem: "Arduino Nano 33 IoT",
     description: "Arduino Nano 33 IoT",
     value: 700,
