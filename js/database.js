@@ -215,3 +215,26 @@ function divideEntreAsArrays(lista) {
 
 divideEntreAsArrays(data);
 
+// Cria Arrays dos Tipos de Produtos: Placas, Ascessórios ou Kits
+
+const tagPlacas = new Array();
+const tagAcessorios = new Array();
+const tagKits = new Array();
+
+const arrayPrecos = new Array();
+//console.log(arrayPrecos);
+
+function obtemApenasOPreco(lista) {
+    for (let i = 0; i < lista.length; i++){
+      //console.log(lista[i].value);
+      arrayPrecos.push(lista[i].value);
+    }
+    return arrayPrecos;
+}
+
+obtemApenasOPreco(data);
+//console.log(arrayPrecos);
+
+
+
+

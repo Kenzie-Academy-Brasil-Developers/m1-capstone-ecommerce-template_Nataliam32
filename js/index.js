@@ -28,6 +28,50 @@ let divCheckOut = document.createElement('div');
 divCheckOut.setAttribute('class', 'divCheckOut');
 
 
+// Funções de Soma e Subtração
+
+let soma = 0;
+
+function sum(lista) {
+    for(let i = 0; i < lista.length; i++) {
+        soma += lista[i];
+    }
+    return soma;
+}
+
+function subtraction(lista) {
+    for(let i = 0; i < lista.length; i++) {
+        soma -= lista[i];
+    }
+    return soma;
+}
+
+// Cria os Produtos no Carrinho de Compras
+
+function criaProdutosCarrinho(lista) {
+    for (let i = 0; i < lista.length; i++){
+        let produtoNoCarrinho = lista[i];
+
+        let container = document.createElement("div");
+        container.setAttribute('class', 'containerNoCarrinho');
+
+        let img = document.createElement('img');
+        img.setAttribute('class', 'imgProdutoCarrinho');
+        img.src = produtoNoCarrinho.img;
+
+        let precoNoCarrinho = document.createElement('p');
+        precoNoCarrinho.setAttribute('class', 'precoProdutoCarrinho');
+        precoNoCarrinho.innerText = `R$ ${produtoNoCarrinho.value}`;
+
+        let botaoRemover = document.createElement('button');
+        botaoRemover.setAttribute('class', 'botaoRemoverProdutoCarrinho');
+        botaoRemover.innerText = 'Remover Ítem';
+
+    }
+}
+
+console.log(criaProdutosCarrinho(kits));
+
 function constroiCardsProdutos(lista) {
     for (let i = 0; i < lista.length; i++){
         let produto = lista[i];
@@ -67,7 +111,9 @@ function constroiCardsProdutos(lista) {
         // Cria um Botão de Adicionar ao Carrinho
         let botaoAdicionar = document.createElement('button');
         botaoAdicionar.setAttribute('class', 'botaoAdicionar');
+        botaoAdicionar.setAttribute('id', produto.id);
         botaoAdicionar.textContent = 'Adicionar ao Carrinho';
+        //console.log(botaoAdicionar);
 
         // Append
         sectionPai.appendChild(divDasSecoesProdutos);
@@ -91,6 +137,8 @@ function constroiCardsProdutos(lista) {
 constroiCardsProdutos(kits);
 constroiCardsProdutos(acessorios);
 constroiCardsProdutos(placas);
+
+console.log(arrayPrecos);
 
 
 
