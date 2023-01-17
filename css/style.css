@@ -193,16 +193,17 @@ figure {
 .containerSection{
     height: 600px;
     width: 30vw;
-    margin-top: 49px;
     background-color: white;
     border-radius: 10px;
     color: black;
     margin-right: 7px;
-    border: 2px solid black;
+    display: inline-block;
 }
 
-.containerSection:hover{
-    border: 2px solid #4dffc5;
+.divPrincipalCarrinho {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
 }
 
 .tituloCarrinhoCompras{
@@ -216,23 +217,69 @@ figure {
     height: 30px;
     width: 300px;
     padding: 20px;
+    margin-bottom: 10px;
 }
 
 .divProdutosEscolhids{
     height: 65%;
     width: 99%;
     margin-left: 2px;
-    background-color: #4dffc5;
-    border: 1px solid black;
-    margin-top: 20px;
+    background-color: white;
     border-radius: 10px;
     color: black;
+    border: 2px solid black;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 250px 250px;
+    overflow-x: hidden;
 }
 
 .divCheckOut{
-    height: 18%;
+    height: 17%;
     width: 100%;
+    background-color: #4dffc5;
+    border-radius: 10px;
 }
 
+.containerNoCarrinho {
+    height: 200px;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.imgProdutoCarrinho{
+    height: 100px;
+    width: 150px;
+}
+
+.precoProdutoCarrinho{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.botaoRemoverProdutoCarrinho{
+    font-size: 15px;
+    font-weight: bold;
+    width: 100px;
+    background-color: #4dffc5;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+.botaoRemoverProdutoCarrinho:hover{
+    background-color: orangered;
+}
+
+#idBtnCheckOut{
+    height: 50px;
+    width: 429px;
+    margin-left: 4px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 
