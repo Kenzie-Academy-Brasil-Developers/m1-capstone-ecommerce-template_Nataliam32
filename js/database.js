@@ -3,7 +3,7 @@
 const data = [
   {
     id: 1,
-    img: "../img/kits/arduino_starterkit.jpg.webp",
+    img: "./img/kits/arduino_starterkit.jpg.webp",
     nameItem: "Arduino Starter Kit",
     description:
       "Neste kit da Arduino CC, pensado especialmente a todos aqueles que estão começando a desenvolver os primeiros projetos...",
@@ -13,7 +13,7 @@ const data = [
   },
   {
     id: 2,
-    img: "../img/kits/kitArduinoUno.png",
+    img: "./img/kits/kitArduinoUno.png",
     nameItem: "Kit Arduino Uno Iniciante 1",
     description:
       "Está querendo um kit para iniciantes com ótimo custo benefício? Então, este é para você. Repleto de acessórios para...",
@@ -23,7 +23,7 @@ const data = [
   },
   {
     id: 3,
-    img: "../img/kits/kitMarterRobocore.jpg",
+    img: "./img/kits/kitMarterRobocore.jpg",
     nameItem: "Kit Master Maker Robocore",
     description:
       "Quer um kit que seja tanto para iniciantes quanto para avançados? Então, este kit da Robocore é sua melhor escolha...",
@@ -33,7 +33,7 @@ const data = [
   },
   {
     id: 4,
-    img: "../img/kits/robocore_kit.png",
+    img: "./img/kits/robocore_kit.png",
     nameItem: "Kit Avançado Robocore IoT",
     description:
       "Se seu desejo é um kit para IoT, então este kit avançado da Robocore é exatamente para você. Pensado para desenvolver...",
@@ -43,7 +43,7 @@ const data = [
   },
   {
     id: 5,
-    img: "../img/kits/kitMaker.jpeg",
+    img: "./img/kits/kitMaker.jpeg",
     nameItem: "Kit Maker FilipFlop",
     description:
       "Mais uma excelente opção de kit para iniciantes em desenvolvimento com Arduino Uno, este kit da FilipFlop...",
@@ -53,7 +53,7 @@ const data = [
   },
   {
     id: 6,
-    img: "../img/kits/oplakit.jpg",
+    img: "./img/kits/oplakit.jpg",
     nameItem: "Arduino Oplà Kit",
     description:
       "Está procurando um kit para IoT de altíssima qualidade e com direito à acesso por um ano ao Arduino Cloud? Então...",
@@ -63,7 +63,7 @@ const data = [
   },
   {
     id: 7,
-    img: "../img/acessorios/caixaAcessorios.jpg",
+    img: "./img/acessorios/caixaAcessorios.jpg",
     nameItem: "Caixa Acessórios",
     description: 
     "Quer uma caixa recheada com todos os acessórios que você precisa para desenvolver seu projeto?...",
@@ -73,7 +73,7 @@ const data = [
   },
   {
     id: 8,
-    img: "../img/acessorios/Dht11.jpg",
+    img: "./img/acessorios/Dht11.jpg",
     nameItem: "Sensor de Umidade e Temperatura DHT11",
     description: 
     "Sensor de Umidade e Temperatura DHT11, de grande precisão",
@@ -83,7 +83,7 @@ const data = [
   },
   {
     id: 9,
-    img: "../img/acessorios/kit_400_resistores.jpg.webp",
+    img: "./img/acessorios/kit_400_resistores.jpg.webp",
     nameItem: "Kit 400 Resistores",
     description: 
     "Kit com 400 resistores de variadas amperagens",
@@ -93,7 +93,7 @@ const data = [
   },
   {
     id: 10,
-    img: "../img/acessorios/lcd.png",
+    img: "./img/acessorios/lcd.png",
     nameItem: "Display de LCD 16X2",
     description: "Display de LCD Display de LCD 16X2 I2C BackLight Azul",
     value: 15,
@@ -102,7 +102,7 @@ const data = [
   },
   {
     id: 11,
-    img: "../img/acessorios/led.jpg",
+    img: "./img/acessorios/led.jpg",
     nameItem: "Kit 10 LEDs Variadas Cores",
     description: "Kit 10 LEDs Variadas Cores",
     value: 3.5,
@@ -111,7 +111,7 @@ const data = [
   },
   {
     id: 12,
-    img: "../img/acessorios/motorServo.jpg",
+    img: "./img/acessorios/motorServo.jpg",
     nameItem: "Motor Servo 180 graus",
     description: "Motor Servo 180 graus",
     value: 38.5,
@@ -120,7 +120,7 @@ const data = [
   },
   {
     id: 13,
-    img: "../img/acessorios/Sensor-Capacitivo-de-Umidade-do-Solo-1.jpg",
+    img: "./img/acessorios/Sensor-Capacitivo-de-Umidade-do-Solo-1.jpg",
     nameItem: "Sensor Capacitivo de Umidade de Solo",
     description: "Sensor Capacitivo de Umidade de Solo",
     value: 20,
@@ -129,7 +129,7 @@ const data = [
   },
   {
     id: 14,
-    img: "../img/acessorios/displayOled.jpg",
+    img: "./img/acessorios/displayOled.jpg",
     nameItem: "Display Oled 0.96 I2C",
     description: "Display Oled 0.96 I2C Backlight Branco",
     value: 35,
@@ -138,7 +138,7 @@ const data = [
   },
   {
     id: 15,
-    img: "../img/placas/arduinoUnoR3.png",
+    img: "./img/placas/arduinoUnoR3.png",
     nameItem: "Arduino Uno R3",
     description: "Arduino Uno R3 da Robocore",
     value: 200,
@@ -147,7 +147,7 @@ const data = [
   },
   {
     id: 16,
-    img: "../img/placas/blackboardMega.png",
+    img: "./img/placas/blackboardMega.png",
     nameItem: "BlackBoard Mega 2560 R3",
     description: "BlackBoard Mega 2560 R3 da Robocore",
     value: 300,
@@ -156,7 +156,7 @@ const data = [
   },
   {
     id: 17,
-    img: "../img/placas/arduinoUno.jpg.webp",
+    img: "./img/placas/arduinoUno.jpg.webp",
     nameItem: "Arduino Uno R3 da Arduino CC",
     description: "Arduino Uno R3 da Arduino CC, Original",
     value: 500,
@@ -165,7 +165,7 @@ const data = [
   },
   {
     id: 18,
-    img: "../img/placas/arduinoUnoLimitado.webp",
+    img: "./img/placas/arduinoUnoLimitado.webp",
     nameItem: "Arduino UNO Mini Limited Edition",
     description: "Arduino UNO Mini Limited Edition",
     value: 1000,
@@ -174,7 +174,7 @@ const data = [
   },
   {
     id: 19,
-    img: "../img/placas/mkr1010.jpg",
+    img: "./img/placas/mkr1010.jpg",
     nameItem: "Arduino MKR WiFi 1010",
     description: "Arduino MKR WiFi 1010",
     value: 800,
@@ -183,7 +183,7 @@ const data = [
   },
   {
     id: 20,
-    img: "../img/placas/nano.png",
+    img: "./img/placas/nano.png",
     nameItem: "Arduino Nano 33 IoT",
     description: "Arduino Nano 33 IoT",
     value: 700,
