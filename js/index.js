@@ -72,6 +72,10 @@ function constroiCardsProdutos(lista) {
         imgDoProduto.src = produto.img;
 
         // Cria Categoria do Produto
+
+        let nomeDoProduto = document.createElement('h4');
+        nomeDoProduto.setAttribute('class', 'nomeDoProduto');
+        nomeDoProduto.innerText = produto.nameItem;
         
         let categoria = document.createElement('p');
         categoria.setAttribute('class', 'categoria');
@@ -100,6 +104,7 @@ function constroiCardsProdutos(lista) {
         sectionPai.appendChild(containerDosProdutos);
         containerDosProdutos.appendChild(figureDoProduto);
         figureDoProduto.appendChild(imgDoProduto);
+        containerDosProdutos.appendChild(nomeDoProduto);
         containerDosProdutos.appendChild(categoria);
         containerDosProdutos.appendChild(descricao);
         containerDosProdutos.appendChild(preco);

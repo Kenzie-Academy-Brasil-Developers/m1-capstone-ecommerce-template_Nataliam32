@@ -7,7 +7,8 @@
 
 body {
     font-family: 'Nunito', sans-serif;
-    max-width: 99%;
+    max-width: 98%;
+    overflow-x: hidden;
 }
 
 header {
@@ -161,6 +162,11 @@ figure {
 
 .categoria:hover{
     background-color: orange;
+}
+
+.nomeDoProduto{
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .descricao{
