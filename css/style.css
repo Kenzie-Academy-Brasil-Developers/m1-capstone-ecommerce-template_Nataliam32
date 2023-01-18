@@ -235,10 +235,17 @@ figure {
 }
 
 .divCheckOut{
-    height: 17%;
-    width: 100%;
+    height: 50px;
+    width: 97%;
     background-color: #4dffc5;
     border-radius: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    color: black;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid black;
 }
 
 .containerNoCarrinho {
@@ -280,6 +287,21 @@ figure {
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+    background-color: orange;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#idBtnCheckOut:hover{
+    background-color: orangered;
+}
+
+.tiraDaTela {
+    display: none;
 }
 
 

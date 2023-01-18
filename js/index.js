@@ -31,6 +31,12 @@ divProdutosEscolhidos.setAttribute('class', 'divProdutosEscolhids');
 
 let divCheckOut = document.createElement('div');
 divCheckOut.setAttribute('class', 'divCheckOut');
+let paragNaDivCheckOut = document.createElement('p');
+paragNaDivCheckOut.setAttribute('class', 'paragNaDivCheckOut');
+
+paragAtualizavel = document.createElement('p');
+paragAtualizavel.setAttribute('class', 'paragAtualizavel');
+
 let divCheckOutBtn = document.createElement('button');
 divCheckOutBtn.setAttribute('class', 'divCheckOutBtn');
 divCheckOutBtn.setAttribute('id', 'idBtnCheckOut');
@@ -39,24 +45,8 @@ divCheckOutBtn.innerText = 'Check Out';
 let divPrincipalCarrinho = document.createElement('div');
 divPrincipalCarrinho.setAttribute('class', 'divPrincipalCarrinho');
 
-
-// Funções de Soma e Subtração
-
-let soma = 0;
-
-function sum(lista) {
-    for(let i = 0; i < lista.length; i++) {
-        soma += lista[i];
-    }
-    return soma;
-}
-
-function subtraction(lista) {
-    for(let i = 0; i < lista.length; i++) {
-        soma -= lista[i];
-    }
-    return soma;
-}
+let count = 0;
+//console.log(count);
 
 //criaProdutosCarrinho(kits)
 
@@ -67,6 +57,8 @@ function constroiCardsProdutos(lista) {
         // Cria a Section De Cada Seção
         let divDasSecoesProdutos = document.createElement('div');
         divDasSecoesProdutos.setAttribute('class', 'containerPrincipalDosProdutos');
+        divDasSecoesProdutos.id = 'div'+produto.id;
+        //console.log(divDasSecoesProdutos);
 
         // Cria os Cards de Cada Produto
         let containerDosProdutos = document.createElement('section');
@@ -113,9 +105,11 @@ function constroiCardsProdutos(lista) {
         containerDosProdutos.appendChild(preco);
         containerDosProdutos.appendChild(botaoAdicionar);
         divTituloCarrinhoCompras.appendChild(tituloCarrinhoCompras);
+        divCheckOut.appendChild(paragNaDivCheckOut);
+        divCheckOut.appendChild(paragAtualizavel);
         section.appendChild(divProdutosEscolhidos);
-        section.appendChild(divCheckOutBtn);
         section.appendChild(divCheckOut);
+        section.appendChild(divCheckOutBtn);
         divPrincipalCarrinho.appendChild(divTituloCarrinhoCompras);
         divPrincipalCarrinho.appendChild(section);
         main.appendChild(sectionPai);
@@ -124,18 +118,16 @@ function constroiCardsProdutos(lista) {
     }
 
 }
-
-
-       
+      
 constroiCardsProdutos(kits);
-constroiCardsProdutos(acessorios);
+constroiCardsProdutos(acessorios)
 constroiCardsProdutos(placas);
 
 // Cria os Produtos no Carrinho de Compras
 
 function criaProdutosCarrinho(lista) {
 
-        // Cria a Section De Cada Seção
+    // Cria a Section De Cada Seção
     let container = document.createElement("div");
     container.setAttribute("class", "containerNoCarrinho");
     container.id = 'c'+lista.id;
@@ -150,13 +142,180 @@ function criaProdutosCarrinho(lista) {
 
     let botaoRemover = document.createElement('button');
     botaoRemover.setAttribute('class', 'botaoRemoverProdutoCarrinho');
-    botaoRemover.id = 'r'+lista.id
+    botaoRemover.id = 'r'+lista.id;
+    //console.log(botaoRemover);
     botaoRemover.innerText = 'Remover Item';
 
     container.appendChild(imgCarrinho);
     container.appendChild(precoNoCarrinho);
     container.appendChild(botaoRemover);
-    divProdutosEscolhidos.appendChild(container);       
+    divProdutosEscolhidos.appendChild(container);
+    
+
+    botaoRemover.addEventListener('click', function(e) {
+        let id = e.target.id;
+        //console.log(id);
+        if(id == 'r20') {
+            count -= data[19].value;
+            
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+            let divASerTirada = document.getElementById('c20');
+            divASerTirada.remove();
+          
+        } else if(id == 'r19') {
+
+            count -= data[18].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c19');
+            divASerTirada.remove();
+            
+        } else if(id == 'r18') {
+
+            count -= data[17].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c18');
+            divASerTirada.remove();
+            
+        } else if(id == 'r17') {
+           
+            count -= data[16].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c17');
+            divASerTirada.remove();
+            
+        } else if(id == 'r16') {
+           
+            count -= data[15].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c16');
+            divASerTirada.remove();
+        
+        } else if(id == 'r15') {
+            
+            count -= data[14].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c15');
+            divASerTirada.remove();
+        
+        } else if(id == 'r14') {
+            
+            count -= data[13].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c14');
+            divASerTirada.remove();
+        
+        } else if (id == 'r13') {
+            
+            count -= data[12].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c13');
+            divASerTirada.remove();
+        
+        } else if(id == 'r12') {
+
+            count -= data[11].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c12');
+            divASerTirada.remove();
+        
+        } else if(id == 'r11') {
+           
+            count -= data[10].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c11');
+            divASerTirada.remove();
+        
+        } else if(id == 'r10') {
+            
+            count -= data[9].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c10');
+            divASerTirada.remove();
+        
+        } else if(id == 'r9') {
+            
+            count -= data[8].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c9');
+            divASerTirada.remove();
+            
+        } else if(id == 'r8') {
+            
+            count -= data[7].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c8');
+            divASerTirada.remove();
+
+        } else if(id == 'r7') {
+            
+            count -= data[6].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c7');
+            divASerTirada.remove();
+
+        } else if(id == 'r6') {
+            
+            count -= data[5].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c6');
+            divASerTirada.remove();
+
+        } else if(id == 'r5') {
+            
+            count -= data[4].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c5');
+            divASerTirada.remove();
+
+        } else if(id == 'r4') {
+            
+            count -= data[3].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c4');
+            divASerTirada.remove();
+
+        } else if(id == 'r3') {
+            
+            count -= data[2].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c3');
+            divASerTirada.remove();
+
+        } else if(id == 'r2') {
+            
+            count -= data[1].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c2');
+            divASerTirada.remove();
+
+        } else if(id == 'r1') {
+            
+            count -= data[0].value;
+            paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            let divASerTirada = document.getElementById('c1');
+            divASerTirada.remove();
+        }
+        //console.log(count);
+    });
 }
 
 // Percorre os Botões Criados
@@ -164,81 +323,133 @@ function criaProdutosCarrinho(lista) {
 let botoes =  document.querySelectorAll('.botaoAdicionar');
 //console.log(botoes);
 
-let total = new Array();
-
 for(let i = 0; i < botoes.length; i++) {
-    let botao = botoes[i];
-    
-    botao.addEventListener('click', function(e) {
-        let idElemento = e.target.id;
-        let id = parseInt(idElemento.substring(4));
-        //console.log(id);
-        
-        let carrinho = procuraProduto(id);
-        //console.log(carrinho);
+        let botao = botoes[i];
 
-        let cardNoCarrinho = criaProdutosCarrinho(carrinho);
-        //console.log(cardNoCarrinho);
+        botao.addEventListener('click', function(e){
+            let idElemento = e.target.id;
+            let id = parseInt(idElemento.substring(4));
+            //console.log(id);
+            
+            let carrinho = procuraProduto(id);
+            //console.log(carrinho);
 
-        if(id == 1) {
-            total.push(arrayPrecos[0]);
+            let cardNoCarrinho = criaProdutosCarrinho(carrinho);
+            //console.log(cardNoCarrinho);
             
-        } else if(id == 2) {
-            total.push(arrayPrecos[1]);
+            if(id == 1) {
+               
+                count += data[0].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
+                
+            } else if(id == 2) {
+                
+                count += data[1].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
+                
+            } else if(id == 3) {
+                
+                count += data[2].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
+                
+            } else if(id == 4) {
+                
+                count += data[3].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
+                
+            } else if(id == 5) {
+                
+                count += data[4].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
             
-        } else if(id == 3) {
-            total.push(arrayPrecos[2]);
+            } else if(id == 6) {
+                
+                count += data[5].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
             
-        } else if(id == 4) {
-            total.push(arrayPrecos[3]);
+            } else if(id == 7) {
+                
+                count += data[6].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
             
-        } else if(id == 5) {
-            total.push(arrayPrecos[4]);
-           
-        } else if(id == 6) {
-            total.push(arrayPrecos[5]);
-           
-        } else if(id == 7) {
-            total.push(arrayPrecos[6]);
-           
-        } else if (id == 8) {
-            total.push(arrayPrecos[7]);
-           
-        } else if(id == 9) {
-            total.push(arrayPrecos[8]);
-           
-        } else if(id == 10) {
-            total.push(arrayPrecos[9]);
-           
-        } else if(id == 11) {
-            total.push(arrayPrecos[10]);
-           
-        } else if(id == 12) {
-            total.push(arrayPrecos[11]);
+            } else if (id == 8) {
+                
+                count += data[7].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
             
-        } else if(id == 13) {
-            total.push(arrayPrecos[12]);
-        } else if(id == 14) {
-            total.push(arrayPrecos[13]);
-        } else if(id == 15) {
-            total.push(arrayPrecos[14]);
-        } else if(id == 16) {
-            total.push(arrayPrecos[15]);
-        } else if(id == 17) {
-            total.push(arrayPrecos[16]);
-        } else if(id == 18) {
-            total.push(arrayPrecos[17]);
-        } else if(id == 19){
-            total.push(arrayPrecos[18]);
-        } else if(id == 20) {
-            total.push(arrayPrecos[19]);
-        }
-        console.log(total);
+            } else if(id == 9) {
+                
+                count += data[8].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
+            
+            } else if(id == 10) {
+                
+                count += data[9].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
+            
+            } else if(id == 11) {
+                
+                count += data[10].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
+            
+            } else if(id == 12) {
+                
+                count += data[11].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
+                
+            } else if(id == 13) {
+                
+                count += data[12].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
 
-        // let sectionDoCarrinho = document.querySelector('.containerSection');  
-    });
+            } else if(id == 14) {
+                
+                count += data[13].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            } else if(id == 15) {
+               
+                count += data[14].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            } else if(id == 16) {
+                
+                count += data[15].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            } else if(id == 17) {
+                
+                count += data[16].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            } else if(id == 18) {
+                
+                count += data[17].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            } else if(id == 19){
+                
+                count += data[18].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
+
+            } else if(id == 20) {
+                
+                count += data[19].value;
+                paragNaDivCheckOut.innerText = `R$ ${count},00`;
+            }
+            return count;
+       });
+   
 }
 
+// Event Listener do Botão de Checkout
+
+divCheckOutBtn.addEventListener("click", function(e){
+    let divCheckOutComTexto = document.querySelector('.divCheckOut');
+
+    paragNaDivCheckOut.innerText = `R$ ${count},00`
+    
+});
 
 function procuraProduto(id) {
    
@@ -254,7 +465,99 @@ function procuraProduto(id) {
     return 'Erro';
 }
 
+// Obtém os IDs dos Elementos HTML
+let kitsId = document.getElementById('kits');
+let placasId = document.getElementById('placas');
+let acessoriosId = document.getElementById('acessorios');
+let todoId = document.getElementById('todos');
 
+// Filtra os elementos a serem apresentados
+
+let filtroAcessorio = data.filter(function (obj) {return obj.tag == 'Acessorios'});
+let filtroPlaca = data.filter(function (obj) {return obj.tag == "Placas"});
+
+
+kitsId.addEventListener('click', function(){
+    //console.log('clicou');
+    let section = document.querySelector('.containerPrincipal');
+    section.innerHTML = "";
+    //console.log(div);
+    const arrayKits = [];
+
+
+    for(let i = 0; i < data.length; i++) {
+        let elementoData = data[i];
+        //console.log(elementoData);
+
+        if(elementoData.tag[0] == 'Kits'){
+            console.log(elementoData);
+            arrayKits.push(elementoData);
+            
+        }
+
+    }
+    //console.log(arrayKits);
+    constroiCardsProdutos(arrayKits);
+   
+    
+});
+
+placasId.addEventListener('click', function(){
+  //console.log('clicou');
+  let section = document.querySelector('.containerPrincipal');
+    section.innerHTML = "";
+    //console.log(div);
+    const arrayPlacas = new Array();
+
+
+    for(let i = 0; i < data.length; i++) {
+        let elementoData = data[i];
+        //console.log(elementoData);
+
+        if(elementoData.tag[0] == 'Placas'){
+            console.log(elementoData);
+            arrayPlacas.push(elementoData);
+            
+        }
+
+    }
+    //console.log(arrayKits);
+    constroiCardsProdutos(arrayPlacas);
+});
+
+acessoriosId.addEventListener('click', function(){
+  //console.log('clicou');
+  let section = document.querySelector('.containerPrincipal');
+    section.innerHTML = "";
+    //console.log(div);
+    const arrayAcessorios = new Array();
+
+    for(let i = 0; i < data.length; i++) {
+        let elementoData = data[i];
+        //console.log(elementoData);
+
+        if(elementoData.tag[0] == 'Acessórios'){
+            console.log(elementoData);
+            arrayAcessorios.push(elementoData);
+            
+        }
+
+    }
+    //console.log(arrayKits);
+    constroiCardsProdutos(arrayAcessorios);
+});
+
+todoId.addEventListener('click', function(){
+  //console.log('clicou');
+  let section = document.querySelector('.containerPrincipal');
+  section.innerHTML = "";
+
+  constroiCardsProdutos(data);
+
+
+});
+
+//console.log(count);
 
 
 
