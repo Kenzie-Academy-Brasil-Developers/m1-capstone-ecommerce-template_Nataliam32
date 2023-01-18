@@ -53,7 +53,7 @@ const data = [
   },
   {
     id: 6,
-    img: "./img/kits/oplakit.jpg",
+    img: "./img/kits/oplaKit.jpg",
     nameItem: "Arduino Oplà Kit",
     description:
       "Está procurando um kit para IoT de altíssima qualidade e com direito à acesso por um ano ao Arduino Cloud? Então...",
